@@ -17,7 +17,9 @@ button {
     border: none;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4,
+.headernav-button, 
+.more-link {
     font-family: 'Fraunces', Georgia, 'Times New Roman', Times, serif;
 }
 
@@ -32,12 +34,15 @@ h1, h2, h3, h4 {
 }
 
 .section-text,
-.section-visual {
+.section-visual,
+.subsection {
     width: 50%;
 }
 
-.section-text {
-    padding: 12rem;
+.section-text,
+.subsection {
+    display: flex;
+    height: auto;
 }
 
 .logo {
@@ -91,7 +96,6 @@ h1, h2, h3, h4 {
     border-radius: 1.65rem;
     background-color: var(--white);
     text-transform: uppercase;
-    font-family: 'Fraunces', Georgia, 'Times New Roman', Times, serif;
     font-weight: 700;
     font-size: 0.85rem;
 }
@@ -114,8 +118,17 @@ h1, h2, h3, h4 {
 /* Verb Sections */
 
 .section-text {
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 8rem;
     background: var(--white);
-    color: var(--verydark-grayish-blue);
+    color: var(--dark-grayish-blue);
+    font-size: 1rem;
+}
+
+.section-text h2,
+.section-text p {
+    margin-bottom: 2rem;
 }
 
 .section-text h2,
@@ -123,20 +136,44 @@ h1, h2, h3, h4 {
     color: var(--verydark-desat-blue);
 }
 
+.section-text h2 {
+    font-weight: 900;
+    font-size: 2.25rem;
+}
+
 .more-link {
     text-transform: uppercase;
-    font-family: 'Fraunces', Georgia, 'Times New Roman', Times, serif;
+    font-weight: 900;
+    letter-spacing: 0.05rem;
 }
 
 /* Feature Section */
 
 .subsection {
-    display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    width: 50%;
-    padding: 12rem;
+    min-height: 29.4rem;
+    padding: 3rem;
+    background-position: center;
+    background-size: cover;
+}
+
+.subsection-text {
+    text-align: center;
+    height: 33%;
+}
+
+.subsection h3 {
+    font-weight: 900;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.subsection p {
+    max-width: 20rem;
+    font-size: 0.95rem;
+
 }
 
 .sub-graphicdesign {
@@ -151,30 +188,32 @@ h1, h2, h3, h4 {
 
 /* Client Testimonials */
 
-#client-testimonials,
-.article-wrapper,
-.client-quote {
-    display: flex;
+#client-testimonials {
     background-color: var(--white);
 }
 
+.article-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+    
 #client-testimonials,
 .client-quote {
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 .client-h3 {
-    margin: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.25rem;
     color: var(--grayish-blue);
-}
-
-.article-wrapper {
-    justify-content: center;
 }
 
 .client-quote {
     width: 25%;
+    text-align: center;
     color: var(--verydark-grayish-blue);
 }
 
