@@ -22,7 +22,7 @@ button {
 }
 
 h1, h2, h3, h4,
-.headernav-button, 
+.hbar-button, 
 .more-link {
     font-family: 'Fraunces', Georgia, 'Times New Roman', Times, serif;
 }
@@ -41,12 +41,8 @@ h1, h2, h3, h4,
 .section-text,
 .section-visual,
 .subsection {
-    width: 50%;
-}
-
-.section-text,
-.subsection {
     display: flex;
+    width: 50%;
 }
 
 .logo {
@@ -91,11 +87,11 @@ h1, h2, h3, h4,
     width: auto;
 }
 
-.headernav-link {
+.hbar-link {
     margin-right: 2.5rem;
 }
 
-.headernav-button {
+.hbar-button {
     padding: 1.25rem 2rem;
     border-radius: 1.65rem;
     background-color: var(--white);
@@ -113,10 +109,128 @@ h1, h2, h3, h4,
 
 .header-splash h1 {
     text-transform: uppercase;
+    text-align: center;
     font-weight: 900;
     font-size: 3.5rem;
     letter-spacing: 0.25rem;
     margin: 5rem 0 4rem 0;
+}
+
+/** MOBILE HEADER BURGER MENU **/
+
+.nav {
+    display: none;
+}
+
+#menu-state {
+    display: none;
+}
+
+.hamburger-button {
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+}
+
+.hamburger-button :is(label, a) {
+    position: absolute;
+    inset: 0;
+}
+
+.open {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.close {
+    display: none;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 3rem;
+}
+
+.nav-menu,
+nav .close {
+    display: none;
+}
+
+:is(#menu-state:checked, #menu-state:target) ~ nav :is(ul, .close) {
+    display: block;
+}
+
+:is(#menu-state:checked, #menu-state:target) ~ nav .open {
+    display: none;
+}
+
+.screen-reader-text {
+    clip-path: rect(1px 1px 1px 1px);
+    position: absolute !important;
+    border: 0;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.nav-menu {
+    text-align: center;
+    margin-top: 1.5rem;
+    min-width: 24rem;
+    height: fit-content;
+    position: absolute;
+    padding: 2rem;
+    list-style: none;
+    background-color: var(--white);
+    animation: fadeIn 0.3s;
+    -webkit-animation: fadeIn 0.3s;
+    -moz-animation: fadeIn 0.3s;
+    -o-animation: fadeIn 0.3s;
+    -ms-animation: fadeIn 0.3s;
+}
+
+    @keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+    }
+  
+    @-moz-keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+    }
+  
+    @-webkit-keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+    }
+  
+    @-o-keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+    }
+  
+    @-ms-keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+    }
+
+.nav-link {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 2.5rem;
+    color: var(--verydark-grayish-blue);
+}
+
+.nav-link:active {
+    color: var(--light-mod-cyan);
+}
+
+.nav-link:hover {
+    font-weight: 700;    
 }
 
 /* Verb Sections */
@@ -313,3 +427,42 @@ h1, h2, h3, h4,
 }
 
 /* Media Queries */
+
+@media screen and (max-width: 960px) {
+    .section-text {
+        padding: 4rem;
+    }
+}
+
+@media screen and (max-width: 720px) {
+
+    .desktop-nav {
+        display: none;
+    }
+
+    .mobile-nav {
+        display: block;
+    }
+
+    .section-text {
+        padding: 3rem;
+    }
+
+    .header-bar {
+        align-items: center;
+    }
+
+    .header-splash {
+        height: 34rem;
+    }
+
+    .header-splash h1 {
+        margin: 0 0 4rem 0;
+        padding: 2rem;
+    }
+
+    .desktop-nav {
+        display: none;
+        background-color: red;
+    }
+}

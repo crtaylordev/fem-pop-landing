@@ -15,11 +15,33 @@
   <header class="section header">
     <div class="header-bar">
       <img class="logo header-logo" src="./resources/images/logo.svg">
-      <nav class="header-nav">
-        <a class="headernav-link" href="#">About</a>
-        <a class="headernav-link" href="#">Services</a>
-        <a class="headernav-link" href="#">Projects</a>
-        <button class="headernav-button">Contact</button>
+      <input aria-hidden="true" type="checkbox" id="menu-state" />
+      <nav class="nav mobile-nav">
+          <div class="hamburger-button light-txtcolor">
+              <a class="open" role="button" href="#menu-state">
+                  <span class="screen-reader-text">Open Menu</span>
+              </a>
+              <a class="close" role="button" href="#">
+                  <span class="screen-reader-text">Close Menu</span>
+              </a>
+              <label for="menu-state" aria-hidden="true">
+                  <span class="open">&#9776;</span>
+                  <span class="close">&#10006;</span>
+              </label>
+          </div>
+          <ul class="nav-menu">
+            <li><a class="nav-link" href="#">About</a></li>
+              <li><a class="nav-link" href="#">Services</a></li>
+              <li><a class="nav-link" href="#">Projects</a></li>
+              <li><a class="nav-link" href="#">Contact</a></li>
+              <li><a class="nav-link" href="#">Reservations</a></li>
+          </ul>
+      </nav>      
+      <nav class="headerbar-nav desktop-nav">
+        <a class="hbar-link" href="#">About</a>
+        <a class="hbar-link" href="#">Services</a>
+        <a class="hbar-link" href="#">Projects</a>
+        <button class="hbar-button">Contact</button>
       </nav>
     </div>
     <div class="header-splash">
