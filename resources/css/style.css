@@ -179,10 +179,10 @@ nav .close {
 
 .nav-menu {
     text-align: center;
-    margin-top: 1.5rem;
-    min-width: 24rem;
     height: fit-content;
     position: absolute;
+    left: 0;
+    right: 0;
     padding: 2rem;
     list-style: none;
     background-color: var(--white);
@@ -222,15 +222,11 @@ nav .close {
     text-transform: uppercase;
     text-decoration: none;
     font-size: 2.5rem;
-    color: var(--verydark-grayish-blue);
+    color: var(--verydark-desat-blue);
 }
 
 .nav-link:active {
     color: var(--light-mod-cyan);
-}
-
-.nav-link:hover {
-    font-weight: 700;    
 }
 
 /* Verb Sections */
@@ -429,6 +425,7 @@ nav .close {
 /* Media Queries */
 
 @media screen and (max-width: 960px) {
+
     .section-text {
         padding: 4rem;
     }
@@ -460,9 +457,31 @@ nav .close {
         margin: 0 0 4rem 0;
         padding: 2rem;
     }
+}
 
-    .desktop-nav {
-        display: none;
-        background-color: red;
+@media screen and (max-width: 660px) {
+
+    .section-text,
+    .section-visual {
+        width: 100%;
+        min-height: 29.4rem;
     }
+
+    .section-text {
+        text-align: center;
+        padding: 2rem;
+    }
+
+    .section-text p {
+        font-size: 1.25rem;
+    }
+
+    .transform-section {
+        flex-direction: column-reverse;
+    }
+
+    .standout-section {
+        flex-direction: column;
+    }
+
 }
