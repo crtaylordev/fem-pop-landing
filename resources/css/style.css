@@ -412,6 +412,7 @@ nav .close {
 
 .attribution {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
@@ -445,6 +446,11 @@ nav .close {
         padding: 3rem;
     }
 
+    .header-logo {
+        width: 40%;
+        height: auto;
+    }
+
     .header-bar {
         align-items: center;
     }
@@ -454,15 +460,17 @@ nav .close {
     }
 
     .header-splash h1 {
-        margin: 0 0 4rem 0;
+        margin: 0 0 1rem 0;
         padding: 2rem;
+        font-size: 3rem;
     }
 }
 
 @media screen and (max-width: 660px) {
 
     .section-text,
-    .section-visual {
+    .section-visual,
+    .subsection {
         width: 100%;
         min-height: 29.4rem;
     }
@@ -480,8 +488,65 @@ nav .close {
         flex-direction: column-reverse;
     }
 
-    .standout-section {
+    .standout-section,
+    .feature-section,
+    .article-wrapper {
         flex-direction: column;
+    }
+
+    .header-splash h1 {
+        padding: 1rem;
+    }
+
+    .subsection {
+        padding: 3rem, 1rem;
+    }
+
+    .client-quote {
+        width: 100%;
+        font-size: 1.15rem;
+    }
+
+    .client-avatar,
+    .quote-body,
+    .client-name {
+        margin: 1rem;
+    }
+
+    .testimonial-section h3 {
+        margin-top: 4rem;
+        margin-bottom: 1.5rem;
+    }
+
+    #gallery-section {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .gallery-image {
+        width: 50%;
+    }
+
+    .footernav-link {
+        font-size: 1.15rem;
+    }
+
+    .attribution {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+
+    .attribution p {
+        padding: 0.15rem;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    
+    .header-splash h1 {
+        font-size: 2.25rem;
+        padding: 0;
     }
 
 }
